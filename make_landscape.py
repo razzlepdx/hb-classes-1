@@ -1,4 +1,4 @@
-import datetime
+import time
 import cs1graphics as cg
 
 
@@ -74,6 +74,14 @@ def draw_landscape():
                          'tree': tree,
                          'grass': grass}
     return landscape_objects
+
+
+def moveSun(sun, paper):
+    while True:
+        time.sleep(.1)
+        sun.move(1, 0)
+        if sun.getReferencePoint().getX() - sun.getRadius() > paper.getWidth():
+            sun.moveTo(-sun.getRadius(), 90)
 
 
 if __name__ == '__main__':
