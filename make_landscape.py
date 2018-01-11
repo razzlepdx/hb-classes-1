@@ -65,6 +65,16 @@ def draw_landscape():
     grass.setDepth(75)
     paper.add(grass)
 
+    landscape_objects = {'paper': paper,
+                         'sun1': sun,
+                         'sun2': sun2,
+                         'facade': facade,
+                         'sunrays': [sunrayNE, sunrayNW, sunraySW, sunraySE],
+                         'chimney': chimney,
+                         'tree': tree,
+                         'grass': grass}
+    return landscape_objects
+
 
 if __name__ == '__main__':
-    draw_landscape()
+    landscape_objects = draw_landscape()
